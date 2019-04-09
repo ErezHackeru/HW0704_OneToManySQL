@@ -24,3 +24,6 @@ Q.3
 UPDATE Class
 SET NUMBER_OF_STUDENTS = (SELECT count (Class_ID) FROM Students WHERE Students.Class_ID = Class.ID);
 
+Q.4
+UPDATE Class
+SET NUMBER_OF_VIP = (SELECT count (Class_ID) FROM Students WHERE Students.VIP = 'yes' AND Students.Class_ID = Class.ID);

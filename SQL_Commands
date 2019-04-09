@@ -20,3 +20,7 @@ CREATE TABLE "Class" (
 	"YOUNGEST_VIP"	INTEGER
 );
 
+Q.3
+UPDATE Class
+SET NUMBER_OF_STUDENTS = (SELECT count (Class_ID) FROM Students WHERE Students.Class_ID = Class.ID);
+

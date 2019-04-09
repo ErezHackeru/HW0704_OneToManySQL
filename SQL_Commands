@@ -36,3 +36,10 @@ Q.6
 UPDATE Class
 SET MOST_POPULAR_CITY = (SELECT max (ADDRESS_CITY) FROM Students WHERE Students.Class_ID = Class.ID);
 
+Q.7
+UPDATE Class
+SET OLDEST_VIP = (SELECT max (AGE) FROM Students WHERE Students.Class_ID = Class.ID);
+
+Q.8
+UPDATE Class
+SET OLDEST_VIP = (SELECT min (AGE) FROM Students WHERE Students.Class_ID = Class.ID);

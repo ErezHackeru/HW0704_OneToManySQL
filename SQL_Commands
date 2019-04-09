@@ -32,3 +32,7 @@ Q.5
 UPDATE Class
 SET AGE_AVERAGE = (SELECT avg (AGE) FROM Students WHERE Students.Class_ID = Class.ID);
 
+Q.6
+UPDATE Class
+SET MOST_POPULAR_CITY = (SELECT max (ADDRESS_CITY) FROM Students WHERE Students.Class_ID = Class.ID);
+

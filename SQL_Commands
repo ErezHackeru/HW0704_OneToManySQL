@@ -42,4 +42,4 @@ SET OLDEST_VIP = (SELECT max (AGE) FROM Students WHERE Students.Class_ID = Class
 
 Q.8
 UPDATE Class
-SET OLDEST_VIP = (SELECT min (AGE) FROM Students WHERE Students.Class_ID = Class.ID);
+SET YOUNGEST_VIP = (SELECT min (AGE) FROM Students WHERE Students.Class_ID = Class.ID);
